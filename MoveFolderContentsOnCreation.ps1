@@ -33,6 +33,11 @@ Register-ObjectEvent $fsw Created -SourceIdentifier FileCreated -Action {
     Move-Item -Path $($source + "\*") -destination $destination -Force 
     Remove-Item $source -Force -Recurse 
 
+    # Finally add, commit and push to origin.
+    git add .
+    git commit -m "autoupdated on $(date)"
+    git push origin master
+
  } 
 
 ### STEP 3: Unregister the event and job when you no longer need it.
