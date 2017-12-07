@@ -1,4 +1,4 @@
-
+###
 ### STEP 1: Register the script to run at startup (this needs to be done only once as ADMIN)
 ### $trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:30
 ###  -FilePath C:\temp\MfilesContentPackageGitUploader.ps1 -Name MfilesContentPackageGitUploader
